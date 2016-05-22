@@ -29,3 +29,14 @@ filetype plugin indent on
 nmap <S-Enter> O<Esc>j
 nmap <CR> o<Esc>k
 
+" show matching brackets
+set showmatch
+
+" highlight matches
+set hlsearch
+
+" Set mapleader key
+let mapleader = ","
+
+" turn off search highlight with ',<space>'
+noremap <leader><space> :nohlsearch<CR>
