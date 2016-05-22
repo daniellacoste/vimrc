@@ -1,9 +1,10 @@
+syntax on
 
 " In Insert mode: Use the appropriate number of spaces to insert a <Tab>.
 set expandtab
 
-" Copy indent from current line when starting a new line (typing <CR> in Insert
-" mode or when using the "o" or "O" command).  
+" Copy indent from current line when starting a new line (typing <CR> in
+" Insert mode or when using the "o" or "O" command).  
 set autoindent
 
 " Number of spaces that a <Tab> in the file counts for.
@@ -19,8 +20,9 @@ set number
 " No spell checking
 set number
 
-" Change number color: hi x111_SkyBlue2 ctermfg=111 guifg=#87afff "rgb=135,175,255
-highlight LineNr ctermfg=111
+" Change number color: hi x111_SkyBlue2 ctermfg=111 guifg=#87afff
+" "rgb=135,175,255
+" highlight LineNr ctermfg=111
 
 " Use the following to enable language-dependent indenting
 filetype plugin indent on
@@ -29,14 +31,22 @@ filetype plugin indent on
 nmap <S-Enter> O<Esc>j
 nmap <CR> o<Esc>k
 
-" show matching brackets
+" Show matching brackets
 set showmatch
 
-" highlight matches
+" Highlight matches
 set hlsearch
 
 " Set mapleader key
 let mapleader = ","
 
-" turn off search highlight with ',<space>'
+" Turn off search highlight with ',<space>'
 noremap <leader><space> :nohlsearch<CR>
+
+if $TERM == "xterm-256color"
+    set t_Co=256
+endif
+
+" Use badwolf colorscheme (ensure xterm-256color is enabled)
+colorscheme badwolf
+
