@@ -64,3 +64,6 @@ colorscheme badwolf
 
 " http://vim.wikia.com/wiki/Backspace_and_delete_problems
 set backspace=2
+
+" set status bar
+set laststatus=2
