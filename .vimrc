@@ -28,9 +28,6 @@ filetype plugin indent on
 nmap <S-Enter> O<Esc>j
 nmap <CR> o<Esc>k
 
-" Show matching brackets
-set showmatch
-
 " Highlight current line
 set cursorline
 
@@ -62,8 +59,9 @@ endif
 " Use badwolf colorscheme (ensure xterm-256color is enabled)
 colorscheme badwolf
 
-" http://vim.wikia.com/wiki/Backspace_and_delete_problems
-set backspace=2
+" http://stackoverflow.com/questions/1562633/setting-vim-whitespace-preferences-by-filetype
+autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 
-" set status bar
-set laststatus=2
+" https://vi.stackexchange.com/questions/780/how-to-jump-between-matching-html-xml-tags
+" Jump to matching HTML tag
+runtime macros/matchit.vim
