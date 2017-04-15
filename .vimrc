@@ -4,6 +4,8 @@ syntax on
 " Insert mode or when using the "o" or "O" command).  
 set autoindent
 
+set backspace=2
+
 " Number of spaces that a <Tab> in the file counts for.
 set tabstop=2
 
